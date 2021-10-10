@@ -3,7 +3,6 @@ import "./App.css";
 import Navbar from "../Navbar/Navbar";
 import Home from "../Home/Home";
 import Userlist from "../Userlist/Userlist";
-import Userdetail from "../Userdetail/Userdetail";
 import Addresslist from "../Addresslist/Addresslist";
 import Not from "../Not/Not";
 import { Switch, Route, Redirect } from "react-router-dom";

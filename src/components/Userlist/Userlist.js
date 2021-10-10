@@ -8,12 +8,19 @@ export default function Userlist(props) {
     return props.userdata.find((user, index) => parseInt(id) === index + 1)
   }
 
+  function addClass(ev){
+    let cards = ev.target.closest('.cards')
+    console.log(cards);
+    cards.classList.add('selected');
+
+  }
+
   return (
     <div className="userlist">
       <div className="cards">
         {props.userdata.length === 0 && <p>There are no user yet</p>}
         {props.userdata.map((user, index) => (
-          <div key={index + 1}>
+          <div key={index + 1} onClick = {addClass}>
             <NavLink to={`/userlist/${index + 1}`}>
               <div className="card">
                 <div className="userPhoto">
@@ -23,7 +30,6 @@ export default function Userlist(props) {
                   <p>{`${user.name.first} ${user.name.last}`}</p>
                   <p>{user.email}</p>
                   <p>{user.cell}</p>
-                  <p>{index + 1}</p>
                 </div>
               </div>
             </NavLink>

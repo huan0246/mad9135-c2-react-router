@@ -1,41 +1,94 @@
 .userlist{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: 'a a a b b b';
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 .cards{
-  width: 80%;
-  margin: 0 auto;
+  position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  flex-basis: 50%;
-width: 40%;
-flex-grow: 0;
-flex-shrink: 0;
-border-right: 1px solid #aaa;
-padding: 0 1rem;
+  right: 0%;
+  left:0%;
+  top: 0%;
+  bottom: 0%;
+  grid-area: a;
+  background-color: red;
+  margin:0;
+  padding: 7rem 2.5rem 2rem;
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  transition: right .7s ease-in-out;
+}
+.cards::-webkit-scrollbar {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  display: none;
+}
+
+.cards.selected{
+  right: 50%;
+  margin: 0;
+  padding: 7rem 0 2rem;
 
 }
+
+.cards > div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.cards > div > a{
+  width: 500px;
+  margin: 0;
+  padding: 0;
+  transition: width .8s ease-in-out;
+}
+
+.cards.selected > div > a {
+  width: 80%;
+  margin: 0;
+  padding: 0;
+}
+
 
 .card{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-color: pink;
-  width: 350px;
-  margin: 1rem;
-  padding:1rem;
+  width: 100%;
+  min-width: 340px;
+  padding:1.5rem 0 1.5rem 1.2rem;
+  margin: 1.5rem 0;
   border-radius: 20px;
   cursor: pointer;
+  overflow:auto;
+}
+
+.card > .userPhoto{
+  align-self: flex-start;
+}
+
+.card > .userInfo{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 0 0 0 1rem;
 }
 
 p {
   color: black;
+  margin: 0 0 1rem;
 }
 
 img{
@@ -43,10 +96,8 @@ img{
 }
 
 .userDetails{
-  flex-basis: 50%;
-  width: 40%;
-  flex-grow: 0;
-  flex-shrink: 0;
-  padding: 0 1rem;
-
+  background-color: green;
+  grid-area: b;
+  padding: 8rem 2.5rem 2rem;
+  margin:0;
 }
