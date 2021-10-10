@@ -1,0 +1,23 @@
+
+.tableArea > p{
+  margin: 10rem auto;
+}
+
+.tableArea > table{
+  margin: 10rem auto;
+  border: 2px solid #fff;
+  border-collapse: collapse;
+}
+
+tr{
+  border: 1px solid #fff;
+}
+
+th,
+td{
+  border: 1px solid #fff;
+}
+
+td > p{
+  margin: .5rem 0;
+}

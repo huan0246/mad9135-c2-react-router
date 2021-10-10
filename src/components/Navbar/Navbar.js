@@ -5,7 +5,6 @@ export default function Navbar(props){
 
   function removeSelected(ev){
     let cards = document.querySelector('.cards');
-    console.log(cards)
     if(cards !== null){
       cards.classList.remove('selected');
     }
@@ -13,16 +12,20 @@ export default function Navbar(props){
 
   return (
     <div className="navbar">
-      <NavLink activeClassName="active" to="/" exact>
+      <NavLink activeClassName="active" to="/" exact onClick={removeSelected}>
         Home
       </NavLink>
       <NavLink activeClassName="active" to="/userlist" onClick={removeSelected}>
         User List
       </NavLink>
-      <NavLink activeClassName="active" to="/addresslist">
+      <NavLink
+        activeClassName="active"
+        to="/addresslist"
+        onClick={removeSelected}
+      >
         Address List
       </NavLink>
-      <NavLink activeClassName="active" to="/not">
+      <NavLink activeClassName="active" to="/not" onClick={removeSelected}>
         not found
       </NavLink>
     </div>

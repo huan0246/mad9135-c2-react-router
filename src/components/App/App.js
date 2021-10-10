@@ -19,6 +19,11 @@ function App() {
     console.log(data.results);
   }
 
+  function findUser(id) {
+    return userData.find((user, index) => parseInt(id) === index + 1);
+  }
+
+
   useEffect(() => {
     console.log("useEffect in App was called");
     fetchData();
@@ -31,14 +36,11 @@ function App() {
       </header>
       <main>
         <Switch>
-          {/* <Route path="/userdetail/:id">
-            <Userdetail/>
-          </Route> */}
           <Route path="/userlist">
-            <Userlist userdata={userData} />
+            <Userlist userdata={userData} findUser={findUser} />
           </Route>
           <Route path="/addresslist">
-            <Addresslist />
+            <Addresslist userdata={userData} findUser={findUser}/>
           </Route>
           <Route path="/not">
             <Not />

@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-export default function Userdetail({ findUser }) {
+export default function Userdetail({ findUser, addClass }) {
   const [user, setUser] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
     setUser(findUser(id));
-    console.log(user)
-    console.log(id)
-  }, [findUser, id])
+    addClass();
+    //console.log(user)
+    //console.log(id)
+  }, [findUser, id]);
 
   return (
     <>
