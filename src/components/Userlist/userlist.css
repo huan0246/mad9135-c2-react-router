@@ -1,3 +1,4 @@
+
 .userlist{
   position: relative;
   display: grid;
@@ -18,13 +19,13 @@
   top: 0%;
   bottom: 0%;
   grid-area: a;
-  background-color: red;
+  background-color: #0c0b0f;
   margin:0;
   padding: 7rem 2.5rem 2rem;
   overflow-y: auto;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  transition: right .7s ease-in-out;
+  transition: all .7s ease-in-out;
 }
 .cards::-webkit-scrollbar {
   /* Hide scrollbar for Chrome, Safari and Opera */
@@ -35,7 +36,7 @@
   right: 50%;
   margin: 0;
   padding: 7rem 0 2rem;
-
+  background-color: #070609;
 }
 
 .cards > div{
@@ -47,31 +48,39 @@
 
 .cards > div > a{
   width: 500px;
-  margin: 0;
+  margin: 1.5rem 0;
   padding: 0;
   transition: width .8s ease-in-out;
+  text-shadow: none;
 }
+
 
 .cards.selected > div > a {
   width: 80%;
-  margin: 0;
+  margin: 1.5rem 0;
   padding: 0;
-}
+  background-color: #070609;
 
+}
 
 .card{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: pink;
+  background-color: #18171b;
   width: 100%;
   min-width: 340px;
   padding:1.5rem 0 1.5rem 1.2rem;
-  margin: 1.5rem 0;
+  margin: 0;
   border-radius: 20px;
+  border-right: 8px solid #a26f3d;
+  border-bottom: 2px solid #a26f3d;
   cursor: pointer;
   overflow:auto;
+  box-shadow: 10px 10px 15px #000000;
+  transform: translateY(0%);
+  transition: all 0.7s;
 }
 
 .card > .userPhoto{
@@ -89,14 +98,34 @@
 p {
   color: black;
   margin: 0 0 1rem;
+  color: #febe80;
+  font-weight: 400;
+  font-size: 1.2rem;
+  transition: all .7s;
+}
+
+.card:hover, 
+.card:focus,
+.card:active{
+  border-right: 8px solid #febe80;
+  border-bottom: 2px solid #febe80;
+  background-color: #1b1b1c;
+  transform: translateY(-4%);
+}
+
+.card:hover > .userInfo > p
+{
+  color: #ffe4ca;
+  text-shadow: none;
 }
 
 img{
   border-radius: 50%;
+  box-shadow: 0 5px 15px #0c0b0f;
 }
 
 .userDetails{
-  background-color: green;
+  background-color: #0c0b0f;
   grid-area: b;
   padding: 8rem 2.5rem 2rem;
   margin:0;

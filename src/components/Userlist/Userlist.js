@@ -44,7 +44,11 @@ export default function Userlist(props) {
 
       <div className="userDetails">
         <Route path="/userlist/:id">
-          <Userdetail findUser={props.findUser} addClass={addClass} />
+          <Userdetail
+            findUser={props.findUser}
+            addClass={addClass}
+            usersCount={props.userdata.length}
+          />
         </Route>
       </div>
     </div>

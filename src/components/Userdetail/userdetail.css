@@ -1,0 +1,25 @@
+.userDetailCard{
+  
+}
+
+.userDetailCard > img{
+  box-shadow: 10px 10px 40px #0a0a0b;
+  margin: 0 0 1.5rem;
+}
+
+.userDetailCard > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.userDetailCard > div > h3 {
+  color: #a26f3d;
+  font-size: 1.3rem;
+}
+
+
+.userDetailCard > div > p{
+  color: #ffe4ca;
+}

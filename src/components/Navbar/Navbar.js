@@ -25,9 +25,6 @@ export default function Navbar(props){
       >
         Address List
       </NavLink>
-      <NavLink activeClassName="active" to="/not" onClick={removeSelected}>
-        not found
-      </NavLink>
     </div>
   );
 }

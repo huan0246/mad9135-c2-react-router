@@ -2,23 +2,31 @@
   height:80px;
   position: fixed;
   z-index: 10;
-  background-color: yellow;
+  background-color: #18171b;
   right:0%;
   left:0%;
   top:0%;
   display: flex;
   justify-content: center;
+  box-shadow: 0 0 20px #000;
 }
 
 
 a{
-  color: darkblue;
-  margin: 1rem;
+  color: #019a9e;
+  padding: 1rem 2rem;
   text-decoration: none;
   display: flex;
   align-items: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+  transition: all .7s;
 }
 
-a.active{
-  
+a.active,
+a:hover{
+  color: #00fffc;
+  background-color: #0c0b0f;
+  text-shadow: 0 0 8px #019a9e;
+
 }
