@@ -1,0 +1,17 @@
+.errorPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem 0;
+  color: #febe80;
+}
+
+.errorCode{
+  font-size: 10rem;
+  font-weight: bolder;
+}
+
+.errorMessage{
+  font-size: 2.5rem;
+}

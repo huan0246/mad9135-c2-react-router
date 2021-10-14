@@ -1,5 +1,11 @@
 import React from "react";
+import './not.css'
 
 export default function Not() {
-  return <div>This is NOT FOUND page</div>;
+  return (
+    <div class="errorPage">
+      <div className="errorCode">404</div>
+      <div className="errorMessage">The page is not found</div>
+    </div>
+  )
 }
