@@ -1,5 +1,23 @@
 .home{
-  margin: 0;
+  margin: 10rem 0;
   padding: 0;
   background-color: #0c0b0f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #febe80;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 1.8;
+  font-size: 1.2rem;
 }
