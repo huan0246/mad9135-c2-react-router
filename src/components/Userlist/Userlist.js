@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { NavLink, Route } from 'react-router-dom';
 import Userdetail from '../Userdetail/Userdetail';
 import './userlist.css'

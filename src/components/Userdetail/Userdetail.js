@@ -15,8 +15,6 @@ export default function Userdetail({ findUser, addClass, usersCount }) {
     } else {
       setUserIndex(-1);
     }
-    //console.log(user)
-    //console.log(id)
   }, [findUser, id]);
 
   return (

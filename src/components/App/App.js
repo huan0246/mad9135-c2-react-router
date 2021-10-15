@@ -15,7 +15,16 @@ function App() {
       "https://randomuser.me/api/?results=20&seed=huan0246&nat=au,ca,nz,gb,us&format=json";
     let res = await fetch(url);
     let data = await res.json();
-    setUserData(data.results);
+    let arrangeData = data.results.sort((i, j) => {
+      if (i.name.last > j.name.last) {
+        return 1;
+      } else if (i.name.last < j.name.last) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+    setUserData(arrangeData);
     removeAnime();
     console.log(data.results);
   }

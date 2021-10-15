@@ -1,6 +1,5 @@
 import React from "react";
-import { NavLink, Route } from "react-router-dom";
-import Userdetail from "../Userdetail/Userdetail";
+import { NavLink} from "react-router-dom";
 import './addresslist.css'
 
 export default function Addresslist(props) {
@@ -17,15 +16,6 @@ export default function Addresslist(props) {
           </thead>
           <tbody>
             {props.userdata
-              .sort((i, j) => {
-                if (i.name.last > j.name.last) {
-                  return 1;
-                } else if (i.name.last < j.name.last) {
-                  return -1;
-                } else {
-                  return 0;
-                }
-              })
               .map((user, index) => (
                 <tr key={index + 1}>
                   <td>
