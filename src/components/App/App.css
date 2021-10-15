@@ -1,4 +1,42 @@
 .App {
+  position: relative;
   text-align: center;
 }
 
+.overlay{
+  display: none;
+}
+
+.overlay.active {
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index: 12;
+  opacity: 0.7;
+}
+
+
+.overlay > p{
+  font-size: 4rem;
+  font-weight: 400;
+  color: #00fffc;
+  /* animation: loadingAn 1s ease-in 0s infinite; */
+}
+
+@keyframes loadingAn {
+  0%{
+    opacity: 0.2;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.2;
+  }
+}
